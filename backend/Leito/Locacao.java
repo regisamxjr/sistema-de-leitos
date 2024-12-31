@@ -2,6 +2,6 @@ package backend.Leito;
 
 public enum Locacao {
     OCUPADO, 
-    LIVRE, 
+    DISPONIVEL, 
     MANUTENCAO,    
 }
