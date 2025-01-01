@@ -2,17 +2,16 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f1f8f6; /* Verde claro */
+    background-color: #f1f8f6; 
     color: #333;
 }
 
 h1, h2 {
-    color: #2e7d32; /* Verde escuro */
+    color: #2e7d32; 
 }
 
-/* Cabeçalho */
 header {
-    background-color: #43a047; /* Verde médio */
+    background-color: #43a047; 
     color: white;
     padding: 10px 0;
 }
@@ -38,7 +37,6 @@ header {
     gap: 10px;
 }
 
-/* Botões */
 .btn {
     padding: 10px 20px;
     background-color: white;
@@ -56,7 +54,6 @@ header {
     color: white;
 }
 
-/* Corpo Principal */
 main {
     padding: 20px;
     text-align: center;
@@ -80,7 +77,6 @@ main {
     background-color: #1b5e20;
 }
 
-/* Tabela de Preços */
 .pricing {
     margin-top: 40px;
 }
