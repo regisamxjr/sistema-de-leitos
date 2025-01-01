@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <title>Controle de Leitos</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1>
+                    <img src="logo.png" alt="Logo da Empresa" class="logo">
+                </h1>
+                <div class="nav-buttons">
+                    <button class="btn home">Home</button>
+                    <button class="btn login">Login</button>
+                    <button class="btn perfil">Perfil</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Controle de Leitos</h1>
+            <button class="btn reserve">Reserve seu leito</button>
+        </section>
+
+        <section class="pricing">
+            <h1>Tabela de Preços</h1>
+            <div class="pricing-table">
+                <div class="pricing-item">
+                    <h2>Leito Comum</h2>
+                    <p>Acomodação básica e confortável.</p>
+                    <button class="btn-details" onclick="window.open('details-comum.html', '_blank')">Mais detalhes</button>
+                </div>
+                <div class="pricing-item">
+                    <h2>Leito Premium</h2>
+                    <p>Maior privacidade e recursos adicionais.</p>
+                    <button class="btn-details" onclick="window.open('details-premium.html', '_blank')">Mais detalhes</button>
+                </div>
+                <div class="pricing-item">
+                    <h2>Leito Executivo</h2>
+                    <p>Conforto e serviços de alta qualidade.</p>
+                    <button class="btn-details" onclick="window.open('details-executivo.html', '_blank')">Mais detalhes</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
