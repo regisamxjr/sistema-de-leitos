@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/frontend/css/style.css">
+    <link rel="stylesheet" href="/frontend/js/script.js">
     <link rel="icon" href="/frontend/img/logo RX SOFTWARE.jpg" type="image/png">
 
     <title>Controle de Leitos</title>
@@ -13,12 +14,13 @@
         <nav class="navbar">
             <div class="nav-container">
                 <h1>
-                    <img src="/frontend/img/logo RX SOFTWARE.jpg" alt="Logo da Empresa" class="logo">
+                    <img src="/frontend/img/logohosp.png" alt="Logo da Empresa" class="logo">
                 </h1>
                 <div class="nav-buttons">
                     <button class="btn home">Home</button>
                     <button class="btn login">Login</button>
                     <button class="btn perfil">Perfil</button>
+                    <button class="btn contato">Contato</button> 
                 </div>
             </div>
         </nav>
@@ -26,30 +28,76 @@
 
     <main>
         <section class="intro">
-            <h1>Controle de Leitos</h1>
-            <button class="btn reserve">Reserve seu leito</button>
+            <h1>O CUIDADO COM A SUA SAÚDE</h1>
+            <h1>É A NOSSA PRIORDADE</h1>
+            <button class="btn reserve" id="btn-reserve">Reserve seu leito</button>
         </section>
 
         <section class="pricing">
-            <h1>Tabela de Preços</h1>
+            <h1>SERVIÇOS OFERECIDOS</h1>
             <div class="pricing-table">
                 <div class="pricing-item">
+                    <img src="/frontend/img/leitocomum.jpg" alt="Leito Comum" class="pricing-img">
                     <h2>Leito Comum</h2>
                     <p>Acomodação básica e confortável.</p>
-                    <button class="btn-details" onclick="window.open('leitocomum.html', '_blank')">Mais detalhes</button>
+                    <p><strong>Preço:</strong> R$100,00 por dia</p>
+                    <p><strong>Comodidades:</strong> Cama simples, Wi-Fi gratuito, Banheiro compartilhado.</p>
                 </div>
                 <div class="pricing-item">
+                    <img src="/frontend/img/leitopremium.jpeg" alt="Leito Premium" class="pricing-img">
                     <h2>Leito Premium</h2>
                     <p>Maior privacidade e recursos adicionais.</p>
-                    <button class="btn-details" onclick="window.open('leitopremium.html', '_blank')">Mais detalhes</button>
+                    <p><strong>Preço:</strong> R$200,00 por dia</p>
+                    <p><strong>Comodidades:</strong> Cama queen-size, Wi-Fi rápido, Banheiro privativo, TV a cabo.</p>
                 </div>
                 <div class="pricing-item">
+                    <img src="/frontend/img/leitoexecutivo.jpg" alt="Leito Executivo" class="pricing-img">
                     <h2>Leito Executivo</h2>
                     <p>Conforto e serviços de alta qualidade.</p>
-                    <button class="btn-details" onclick="window.open('leitoexecutivo.html', '_blank')">Mais detalhes</button>
+                    <p><strong>Preço:</strong> R$300,00 por dia</p>
+                    <p><strong>Comodidades:</strong> Cama king-size, Wi-Fi ultra rápido, Banheiro privativo de luxo, Mesa de trabalho.</p>
                 </div>
             </div>
         </section>
     </main>
+
+    <div class="modal" id="modal-login">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2>Login</h2>
+            <form id="form-login">
+                <!-- Seleção de Perfil (Paciente ou Médico) -->
+                <label for="perfil">Selecione seu Perfil:</label>
+                <select id="perfil" name="perfil" required>
+                    <option value="paciente">Paciente</option>
+                    <option value="medico">Médico</option>
+                </select>
+    
+                <!-- Campo de Login (Nome de Usuário) -->
+                <label for="usuario">Nome de Usuário:</label>
+                <input type="text" id="usuario" name="usuario" required>
+    
+                <!-- Campo de Senha -->
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+    
+                <!-- Esqueci a Senha -->
+                <div class="forgot-password">
+                    <a href="#">Esqueci a Senha</a>
+                </div>
+    
+                <!-- Botão de Login -->
+                <button type="submit" class="btn">Entrar</button>
+    
+                <!-- Registro Opcional -->
+                <div class="register-option">
+                    <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="/frontend/js/script.js"></script>
 </body>
 </html>
