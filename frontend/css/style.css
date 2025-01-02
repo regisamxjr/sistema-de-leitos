@@ -34,10 +34,23 @@ header {
 
 .nav-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Alinha os botões à direita */
     align-items: center;
-    gap: 40px;
+    gap: 20px;
     margin-top: 5px;
+}
+
+.nav-buttons .btn {
+    font-size: 16px; /* Ajusta o tamanho da fonte para todos os botões */
+}
+
+.nav-buttons .login-medico {
+    background-color: #4CAF50; /* Cor diferenciada para o botão Login Médico */
+    color: white;
+}
+
+.nav-buttons .login-medico:hover {
+    background-color: #388E3C; /* Cor de hover para o botão Login Médico */
 }
 
 #btn-reserve {
@@ -248,47 +261,65 @@ form select {
     text-decoration: underline;
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 60px;
+/* Estilização de todos os botões */
+.btn {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+.btn:hover {
+    background-color: #0A3D7D;
+}
+
+/* Modal (Tela de Reserva) */
+.modal {
+    display: none; /* Começa escondido */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Content */
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto;
     padding: 20px;
-    border: 1px solid #888;
-    width: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
 .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
     color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
 }
 
-.close-btn:hover,
-.close-btn:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.close-btn:hover {
+    color: #000;
 }
 
 form label {
-    display: block;
-    margin: 10px 0 5px;
+    margin-top: 10px;
     font-weight: bold;
+    display: block;
 }
 
 form input,
@@ -301,34 +332,151 @@ form textarea {
     border-radius: 5px;
 }
 
-.forgot-password,
-.register-option {
+/* Estilos para a seção de convênios */
+.convenios {
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+    margin-top: 60px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.forgot-password a,
-.register-option a {
+.convenios-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.convenios-header h1 {
+    font-size: 2.5em;
     color: #2196F3;
+}
+
+.convenios-list ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.convenios-list li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.convenios-header .convenio-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.convenios-header .convenio-btn:hover {
+    background-color: #388E3C;
+}
+
+/* Estilos para o footer */
+.footer {
+    background-color: #2196F3;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 4px solid #0A3D7D;
+}
+
+.footer-info, .footer-social {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.footer h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.footer p, .footer ul {
+    font-size: 1.1em;
+    color: #f9f9f9;
+}
+
+.footer ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #f9f9f9;
     text-decoration: none;
 }
 
-.forgot-password a:hover,
-.register-option a:hover {
+.footer ul li a:hover {
     text-decoration: underline;
 }
 
-.btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #2196F3;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
+.footer-info p, .footer-social ul li a {
+    font-size: 1.1em;
 }
 
-.btn:hover {
-    background-color: #0A3D7D;
+.footer-info p strong {
+    font-weight: bold;
 }
+
+.footer-info .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-info .contact p {
+    font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+    .nav-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-container {
+        gap: 20px;
+    }
+
+    .pricing-table {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .pricing-item {
+        width: 100%;
+    }
+
+    .footer-info, .footer-social {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info, .footer-social {
+        margin-bottom: 20px;
+    }
+}
+
